@@ -23,43 +23,27 @@ body{
     font-size: 1.6rem;
 }
 
+.grilla{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: "presentacion" "main";
+    gap: 5px;
+}
+
 
 #presentacion{
     background-image: url(../assets/img/bootstrap_image.jfif) ;
     height: 20rem;
+    border: 5px solid black;
 
+    grid-area: presentacion;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.estrellitas{
-    width: 10px;
-    height: 10px;
-    background-color: green;
-    animation: estrellas 10s ease 0s infinite;
+#main{
+    grid-area: main;
+    border: 5px solid black;
 }
-.presentacion--animacion{
-    width: 100px;
-    height: 100px;
-    animation: estrelas 10s ease 0s infinite;
-}
-
-@keyframes estrellas {
-    0%{
-        background-color: rgba(255,0,0, 1);
-    }
-    25%{
-        background-color: rgba(255,0,0, 0);
-    }
-    50%{
-        background-color: rgba(255,0,0, 1);
-    }
-    75%{
-        background-color: rgba(255,0,0, 0);
-    }
-    100%{
-        background-color: rgba(255,0,0, 1);
-    }
-}
-
