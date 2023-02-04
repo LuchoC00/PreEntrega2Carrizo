@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.navbar-nav{
+    width: 100%;
+    align-items: center;
+}
+
+.nav-item{
+    background-color: aqua;
+    border: 0.18rem solid;
+    width: 98%;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+
+#presentacion{
+    background-image: url(../assets/img/bootstrap_image.jfif) ;
+    height: 20rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.estrellitas{
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    animation: estrellas 10s ease 0s infinite;
+}
+.presentacion--animacion{
+    width: 100px;
+    height: 100px;
+    animation: estrelas 10s ease 0s infinite;
+}
+
+@keyframes estrellas {
+    0%{
+        background-color: rgba(255,0,0, 1);
+    }
+    25%{
+        background-color: rgba(255,0,0, 0);
+    }
+    50%{
+        background-color: rgba(255,0,0, 1);
+    }
+    75%{
+        background-color: rgba(255,0,0, 0);
+    }
+    100%{
+        background-color: rgba(255,0,0, 1);
+    }
+}
+
