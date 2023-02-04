@@ -6,6 +6,16 @@
 
 body{
     background-color: aquamarine;
+    background: linear-gradient(lightblue, rgb(65, 115, 182));
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    border: 5px solid black;
+    padding: 10px;
 }
 
 .navbar-nav{
@@ -14,7 +24,7 @@ body{
 }
 
 .nav-item{
-    background-color: aqua;
+    background-color: rgb(170, 233, 233);
     border: 0.18rem solid;
     width: 98%;
     text-align: center;
@@ -23,19 +33,24 @@ body{
     font-size: 1.6rem;
 }
 
+.texto_principal{
+    margin: 1.3rem;
+}
+
 .grilla{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 2fr 2fr;
-    grid-template-areas: "presentacion" "main";
+    grid-template-rows: auto auto .75fr .75fr .75fr .5fr;
+    grid-template-areas: "presentacion" "main" "seccion-1" "seccion-2" "seccion-3" "footer";
     gap: 5px;
 }
 
-
 #presentacion{
     background-image: url(../assets/img/bootstrap_image.jfif) ;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center;
     height: 20rem;
-    border: 5px solid black;
 
     grid-area: presentacion;
     display: flex;
@@ -46,4 +61,60 @@ body{
 #main{
     grid-area: main;
     border: 5px solid black;
+}
+
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion-1;
+}
+.derecha{
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion-2;
+}
+.izquierda-2{
+    display: flex;
+    flex-direction: column;
+    grid-area: seccion-3;
+}
+
+footer{
+    background-color: rgb(61, 61, 61);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: footer;
+    border: 5px solid black;
+    padding: 5px 3px 0 3px;
+}
+footer div.texto{
+    color: rgb(228, 216, 216);
+}
+
+footer div.logo{
+    margin: 5px;
+    font-size: 1.2rem;
+}
+
+
+@media only screen and (min-width: 768px){
+
+    
+    .izquierda{
+        display: flex;
+        flex-direction: row;
+        grid-area: seccion-1;
+    }
+    .derecha{
+        display: flex;
+        flex-direction: row-reverse;
+        grid-area: seccion-2;
+    }
+    .izquierda-2{
+        display: flex;
+        flex-direction: row;
+        grid-area: seccion-3;
+    }
 }
